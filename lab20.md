@@ -1,82 +1,85 @@
-# Lab 20 — Readiness record
-Linda Li · November 10, 2026
+# Lab 20 — Project 2 Readiness
+Linda Li · Updated November 10, 2026
 
-## D — Can a stranger reach the decision?
-**Not yet from the inspected portfolio work alone.** The available Lab 15 app supplies a portfolio engine and controls, but the inspected files do not constitute a complete Project 2 submission. This is a preparation audit, not a partner cold run.
+ChatGPT assisted with the evidence review and documentation. Student attestations and partner reports are attributed below; AI did not witness the partner run. Education, not investment advice.
 
-## R — Readiness audit
+## D — Decision and repository
+Actual Project 2: [llindali/project2](https://github.com/llindali/project2). This supersedes the earlier preparation audit of Lab 15, which preceded identification of the standalone project.
 
-| Required item | Evidence and status |
+**Reject live adoption, with a live allocation range of 0–0%; reconsider only after policy and evidence gaps are resolved and robustness checks pass without lowering the return hurdle.** The research mix is 55% SGOV / 0% BND / 45% VT.
+
+## R — Readiness evidence
+| Item | Location / current status |
 |---|---|
-| Operable Python web app | [Lab 15 app](https://github.com/llindali/lab15/blob/main/app.py) exists; select **Apex project**, since the default is Meridian training. Web runtime not verified in this preparation environment: Streamlit is absent. |
-| README run instructions | [Lab 15 README](https://github.com/llindali/lab15/blob/main/README.md) lists installation and startup commands; no final Project 2 repository or single-command result route was identified. |
-| Visible decision numbers | Lab 15 README has allocations, estimates, risk and window sensitivity. Baseline engine rerun independently reproduced the all-month Apex numbers below. |
-| Mandate | [Lab 13 project mandate](https://github.com/llindali/lab13/blob/main/lab13.md): Apex, $50M, CPI + 4.5% net over rolling ten years, 70/30 benchmark, $1.5M buffer, long-only and 5% issuer cap. Lab 15 uses planning inflation 2.5%, fees 0.25%, and a provisional fund/Treasury exemption. Client approval and look-through interpretation remain unresolved. |
-| Two baselines and constrained portfolio, each with mandate verdict in app | Not complete in inspected app: it displays as-loaded and edited optimized portfolios. Training engine baseline functions alone do not provide the required Apex baseline comparisons and rule verdicts in the app. |
-| Point-in-time signal and data card | [Lab 17 DGS10 card](https://github.com/llindali/lab17/blob/main/README.md) is a separate candidate-data audit. Integration into portfolio decisions and a reproducible timestamp-aware signal rule are not shown in Lab 15. |
-| Stress and stop condition | Lab 15 documents estimation-window and equity-return sensitivity and a proposed 10-point stability tolerance. Full required estimates/window/costs/constraints stress evidence is not assembled in a final project. |
-| Decision memo | No final `docs/decision-memo.md` was identified in inspected Lab 15 files. A prior lab's recommendation is not silently relabeled as the final memo. |
-| Validation and AI use / locked record | No final `docs/validation-and-ai-use.md` or verified AI-off prediction committed before its run was identified. Prior AI-assisted sensitivity results do not satisfy the locked record. |
-| Videos 1–3 and transcripts | No final links/transcripts identified in inspected project-related files. Recording is the student's task. |
-| Manifest | Final Project 2 manifest not identified. This readiness record links only verified existing evidence. |
-| Week 12 must-fix list | Not located in the inspected sources; no studio feedback is invented. |
-| Due date | Must be read from the Brightspace assignment header; the course GitHub page does not provide the enforced date. |
+| App and run instructions | [README](https://github.com/llindali/project2/blob/main/README.md), [app](https://github.com/llindali/project2/blob/main/app.py), [engine](https://github.com/llindali/project2/blob/main/engine.py). Partner reports a clean run; specific control-change observation unreported. |
+| Visible decision numbers | [visible_output.json](https://github.com/llindali/project2/blob/main/visible_output.json), also summarized in README and memo. |
+| Mandate, two baselines and constrained portfolio | [Decision memo](https://github.com/llindali/project2/blob/main/docs/decision-memo.md): equal weight, 70/30 tradable proxy, constrained mix. Full issuer/risk/ten-year compliance remains unverified. |
+| Point-in-time signal and data card | [Data card](https://github.com/llindali/project2/blob/main/docs/data-card.md), referenced by project README. Prospective snapshot signal; no historical-vintage performance claim. |
+| Stress and stop conditions | Memo and validation: estimates, window, fees and constraints; 25-point window shift breaches proposed 10-point tolerance. |
+| Validation, AI use and locked record | [Validation file](https://github.com/llindali/project2/blob/main/docs/validation-and-ai-use.md), including preserved prediction and result commits. |
+| Videos and transcripts | Project README still lists three recorded YouTube videos and corrected transcripts as outstanding. |
+| Manifest | [Submission manifest](https://github.com/llindali/project2/blob/main/docs/submission-manifest.md); pending video entries require actual links. |
+| Week 12 must-fix list / due date | Studio list not supplied here. Enforced due date must be checked in Brightspace. |
 
-### Baseline engine rerun — AI-assisted, not the partner run
-Source: [Lab 15 tree at 10f8ffdb7936a8255c368533e576ebd257de4a62](https://github.com/llindali/lab15/tree/10f8ffdb7936a8255c368533e576ebd257de4a62).
+## I — Partner cold run
+**Evidence:** Linda supplied this as her partner's confirmation on November 10, 2026. The following summarizes that report, not an AI-executed or independently witnessed run.
 
-Downloaded the existing `portfolio.py` and `prices.csv` without modifying their contents. Ran the following from their directory with Python and pandas:
+- Repository: [llindali/project2](https://github.com/llindali/project2).
+- Environment reported: Python 3.11, clean virtual environment.
+- Partner name: not supplied.
+- Exact tested commit: not supplied; the reference commit in Project 2's validation file is not asserted to be the tested checkout.
+- Elapsed time: not supplied.
+- Outcome: dependencies installed without version conflicts, engine completed, app opened at localhost:8501, and unit tests passed.
+- First failure: none reported.
+- Result: root `visible_output.json`, terminal summary, and Streamlit app with mandate verdicts, controls, stress information and download.
+- Specific control moved, old/new values and resulting verdict: not supplied.
 
-```python
-import portfolio as p
-s, c = p.estimate_prices("prices.csv")
-s = [(name, estimate - 0.0025, volatility) for name, estimate, volatility in s]
-print(p.search_mix(s, c, 0.07, [0], 0.03))
+Commands reported:
+```bash
+git clone https://github.com/llindali/project2.git
+cd project2
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python engine.py
+python -m streamlit run app.py
 ```
 
-| Decision number | Reproduced value |
-|---|---:|
-| SGOV / BND / VT | 55% / 0% / 45% |
-| Annual arithmetic net return estimate | 7.1461375% |
-| Annualized volatility estimate | 6.7698422% |
-| Reserve weight / initial value | 55% / $27.5M |
-| Modeled net-return hurdle / minimum reserve | 7% / 3% |
+Validation command reported: `python -m unittest discover -s tests -v`.
+Windows activation alternative: `.venv\Scripts\activate`; no testing on multiple operating systems is inferred.
 
-Weights total 100%, are nonnegative, and meet the modeled estimated-return hurdle and reserve minimum. This does not establish the ten-year return objective, look-through issuer compliance, or client approval. The estimates use the existing September 2021–September 2026 vendor-adjusted price file, not newly fetched or independently authenticated market history.
+Terminology correction: the actual portfolio comparisons are equal weight, 70/30 proxy and constrained portfolio. Base 55/0/45, 36-month 80/0/20 and VT-minus-one-point 50/0/50 are optimized scenario results, not three baselines. The project's validation file already preserves this distinction.
 
-An environment dependency check failed with `ModuleNotFoundError: No module named 'streamlit'`. Pandas engine execution succeeded. This is not a defect demonstrated in the source app and is not a partner finding. The published installation command is `python -m pip install -r requirements.txt`; app startup is `python -m streamlit run app.py`. No successful browser run is claimed.
+## V — Locked Changed-Input Record
+The actual Project 2 validation file now contains the student-attested AI-off prediction and subsequent AI-assisted result. These replace the earlier “not performed” preparation status.
 
-## I — Partner cold run (in class)
-Not performed. Partner opens the actual Project 2 repository in their own folder using only its README, without coaching.
+- Input: VT additive annual return adjustment, 0 to +1.5 percentage points (+150 bps).
+- [Prediction commit](https://github.com/llindali/project2/commit/339e59e2524ca17a64596ea05e2615c6b71a38e3), before the result run.
+- [Preserved before/after output](https://github.com/llindali/project2/blob/c9cbbda8c57cd27f37ee927abfcde2f55460e3ec/results/locked-change-output.json).
+- [Result commit](https://github.com/llindali/project2/commit/c9cbbda8c57cd27f37ee927abfcde2f55460e3ec).
 
-Record here after the activity:
-- Project 2 repository and tested commit:
-- Partner:
-- Exact command:
-- First failure, or explicit clean-run observation:
-- Elapsed time:
-- Location of visible result and mandate verdict:
+| Number | Baseline | Changed |
+|---|---:|---:|
+| SGOV / BND / VT | 55 / 0 / 45% | 60 / 0 / 40% |
+| Net annual arithmetic return estimate | 7.1461375% | 7.3371295% |
+| Annualized volatility | 6.7698422% | 6.0304935% |
+| Reserve value at initial $50M | $27.5M | $30M |
+| Live allocation range | 0–0% | 0–0% |
 
-## V — Locked Changed-Input Record (in class, AI closed for prediction)
-Not performed. No new stress run was executed for this record, and no AI-generated prediction is presented as the student's.
+The committed prediction expected unchanged weights and volatility and a 0.675-point return increase. Actual reoptimization reduced equity by five points, raised estimated return by about 0.191 points and reduced volatility by about 0.739 points. The original prediction mistook output weights for constraints: reserve floor is 3%, equity cap 70%. Higher estimated equity return lets the minimum-volatility model clear the unchanged 7% hurdle with less equity. Rejection of live adoption remains unchanged. The full prediction, diagnosis and student attestation remain in Project 2; no prediction has been rewritten after observing results.
 
-Before rerunning, the student records the selected load-bearing input, old/new values and units, expected direction of decision numbers, and expected decision effect. Commit and push that prediction first. Preserve the prediction commit link, baseline output, changed output, actual decision effect, and explanation after the run. Prior Lab 15 sensitivities are historical context only.
+## Explain the code
+No-AI partner explanation and partner question/answer have not been reported. No completion is claimed.
 
-## Explain the code (in class, six minutes, no AI)
-Not performed. Use the actual Project 2 block that produces the decision number; explain line by line and answer the partner's question from the code. No partner question or answer is invented here.
-
-## E — Fix one thing (after the partner run)
-Pending the actual first failure. Record the fix, pushed commit, and partner rerun; if the run is clean, record the actual clean outcome and that no fix was needed. Preparation findings above are not substituted for that activity.
+## E — Fix one thing
+Partner reports no first failure and a clean first pass; **no fix was needed**. No fabricated fix or rerun is recorded.
 
 ## Decision line
-**Reject adoption of the currently available process; reconsider a research pilot only after the missing Project 2 evidence is assembled, the complete app passes an independent cold run, and the client confirms the mandate assumptions.** No live allocation is authorized by this readiness review.
+**Reject live adoption (0–0% live allocation); reconsider only after approved issuer treatment and risk policy, authenticated fresh data, justified estimates, benchmark evidence and robust feasible stress results with no weight shift over 10 points.** Necessary conditions do not automatically grant approval. The partner's clean run supports reproducibility but does not resolve investment-policy or robustness failures.
 
-The earlier Lab 15 55% SGOV / 45% VT mix remains a reproduced research result, not a committee-approved allocation. A final allocation range cannot be established by a readiness audit of an incomplete submission.
+## Reflect and checkout
+The partner discussion of what the cold run revealed and what Linda will not touch before the deadline remains unreported. Partner elapsed time remains missing from the required cold-run note. This record does not assert full Lab 20 completion.
 
-## Reflect (in class)
-Pending the actual discussion: record what the partner's cold run revealed and what the student commits not to change before the deadline.
+Submit the [Lab 20 record](https://github.com/llindali/lab20/blob/main/lab20.md) and relevant Project 2 evidence links through Brightspace → Quizzes → Lab 20. Brightspace submission and due-date confirmation are not claimed here.
 
-## Checkout
-Submit the individual GitHub links to [this record](https://github.com/llindali/lab20/blob/main/lab20.md) and the [README](https://github.com/llindali/lab20/blob/main/README.md) through Brightspace → Quizzes → Lab 20 after the actual activities. Check the Project 2 due date in the Brightspace assignment header. This preparation does not claim quiz submission.
-
-Sources: [Lab 20](https://github.com/CinderZhang/FIN43900-Fall2026/blob/main/lessons/week-13/lab-20-project2-readiness.md) · [Project 2 requirements](https://github.com/CinderZhang/FIN43900-Fall2026/blob/main/projects/project-2-investment-management-application.md).
+Source: [Lab 20 instructions](https://github.com/CinderZhang/FIN43900-Fall2026/blob/main/lessons/week-13/lab-20-project2-readiness.md).
