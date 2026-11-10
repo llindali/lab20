@@ -1,16 +1,12 @@
 # Lab 20 — Project 2 Readiness
-Linda Li · FIN 43900 · Preparation checked November 10, 2026
+Linda Li · November 10, 2026
 
-ChatGPT assisted with repository inspection, a baseline engine rerun, and this readiness audit. The student must review and own the analysis and decision. Educational analysis, not investment advice.
+ChatGPT assisted with evidence review and documentation. Partner reports and student attestations are identified in the record. Education, not investment advice.
 
-[Lab 20 record and readiness findings](lab20.md)
+[Lab 20 record](lab20.md) · [Actual Project 2](https://github.com/llindali/project2) · [Validation and AI use](https://github.com/llindali/project2/blob/main/docs/validation-and-ai-use.md)
 
-## Decision line
-**Reject adoption of the currently available process; reconsider a research pilot only after the missing Project 2 evidence is assembled, the complete app passes an independent cold run, and the client confirms the mandate assumptions.** No live allocation is authorized by this readiness review.
+**Decision: reject live adoption, live allocation range 0–0%.** Research mix: 55% SGOV / 0% BND / 45% VT. Reconsider after the policy, data and robustness conditions in the Project 2 memo are satisfied.
 
-## Scope and evidence
-Lab 20 checks an existing Project 2; it does not require creating a replacement project. This repository was empty at inspection. No separately named Project 2 repository was found among the account's accessible repositories. The closest portfolio implementation inspected is [Lab 15](https://github.com/llindali/lab15), with a separate [Lab 17 point-in-time audit](https://github.com/llindali/lab17). Neither is assumed to be the final Project 2.
+The record now includes Linda's supplied partner confirmation of a clean run (no fix needed) and links to the existing committed AI-off prediction and before/after result. This supersedes the earlier Lab 15-only preparation audit.
 
-Only the preparation audit and findings are completed here. Partner observations, the AI-off prediction and code explanation, and reflections remain for the actual class activities. The course explicitly permits truthful unresolved items; this record does not claim the lab's in-class floor or Project 2 is complete.
-
-Source: [Lab 20 instructions](https://github.com/CinderZhang/FIN43900-Fall2026/blob/main/lessons/week-13/lab-20-project2-readiness.md).
+Still unreported: partner elapsed time/name, specific control-change observation, no-AI code discussion and reflection. No full Lab 20 completion or Brightspace submission is claimed. Videos and transcripts remain separate Project 2 submission work.
