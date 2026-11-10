@@ -11,7 +11,7 @@ Actual Project 2: [llindali/project2](https://github.com/llindali/project2). Thi
 ## R — Readiness evidence
 | Item | Location / current status |
 |---|---|
-| App and run instructions | [README](https://github.com/llindali/project2/blob/main/README.md), [app](https://github.com/llindali/project2/blob/main/app.py), [engine](https://github.com/llindali/project2/blob/main/engine.py). Partner reports a clean run; specific control-change observation unreported. |
+| App and run instructions | [README](https://github.com/llindali/project2/blob/main/README.md), [app](https://github.com/llindali/project2/blob/main/app.py), [engine](https://github.com/llindali/project2/blob/main/engine.py). Partner reports a clean run and the control checks recorded below. |
 | Visible decision numbers | [visible_output.json](https://github.com/llindali/project2/blob/main/visible_output.json), also summarized in README and memo. |
 | Mandate, two baselines and constrained portfolio | [Decision memo](https://github.com/llindali/project2/blob/main/docs/decision-memo.md): equal weight, 70/30 tradable proxy, constrained mix. Full issuer/risk/ten-year compliance remains unverified. |
 | Point-in-time signal and data card | [Data card](https://github.com/llindali/project2/blob/main/docs/data-card.md), referenced by project README. Prospective snapshot signal; no historical-vintage performance claim. |
@@ -25,14 +25,24 @@ Actual Project 2: [llindali/project2](https://github.com/llindali/project2). Thi
 **Evidence:** Linda supplied this as her partner's confirmation on November 10, 2026. The following summarizes that report, not an AI-executed or independently witnessed run.
 
 - Repository: [llindali/project2](https://github.com/llindali/project2).
-- Environment reported: Python 3.11, clean virtual environment.
-- Partner name: not supplied.
+- Environment reported: Python 3.11, fresh virtual environment on macOS/Linux; exact OS not distinguished.
+- Auditor label: Peer Auditor (Lab 20 Cold-Check Session); personal name not supplied.
 - Exact tested commit: not supplied; the reference commit in Project 2's validation file is not asserted to be the tested checkout.
-- Elapsed time: not supplied.
+- Elapsed time: **6 minutes 15 seconds**, from clone through interactive UI validation.
 - Outcome: dependencies installed without version conflicts, engine completed, app opened at localhost:8501, and unit tests passed.
 - First failure: none reported.
 - Result: root `visible_output.json`, terminal summary, and Streamlit app with mandate verdicts, controls, stress information and download.
-- Specific control moved, old/new values and resulting verdict: not supplied.
+### Partner-reported control checks — November 10, 2026
+- **Auditor label supplied:** Peer Auditor (Lab 20 Cold-Check Session); personal name not supplied.
+- **Total elapsed time:** 6 minutes 15 seconds, from clone through installation, engine run and interactive UI check.
+- **Environment:** Python 3.11, fresh virtual environment, macOS/Linux as reported; exact OS not distinguished.
+- **VT adjustment:** 0 to +1.5 annual percentage points. Reported mix changed 55/0/45 to 60/0/40 (SGOV/BND/VT); net estimate 7.15% to 7.34%; volatility 6.77% to 6.03%. Response time reported under one second.
+- **Window check:** partner additionally reports 60 to 36 months, with 80/0/20 and a 25-point stability stop. The report does not specify whether the VT slider was reset first; this is not asserted as evidence of the combined 36-month/+1.5-point case.
+- **Verdict:** reject live adoption remained active because unresolved policy and evidence conditions remain.
+- **UI wording qualification:** inspected app code uses a persistent rejection message and a stress-results table. The partner's “warning banner” and “updated explanation” wording is treated as a description of the outcome, not a verbatim quote or proof of dynamically rewritten recommendation text. Stress cases are calculated separately from current sidebar inputs.
+- **First failure:** none reported; no fix needed. Unit tests reported passing. Module invocation used the selected environment; prevention of hypothetical PATH errors was not separately tested.
+
+These observations are supplied by Linda as her partner's report, not newly executed or independently witnessed by the AI assistant.
 
 Commands reported:
 ```bash
@@ -78,7 +88,7 @@ Partner reports no first failure and a clean first pass; **no fix was needed**. 
 **Reject live adoption (0–0% live allocation); reconsider only after approved issuer treatment and risk policy, authenticated fresh data, justified estimates, benchmark evidence and robust feasible stress results with no weight shift over 10 points.** Necessary conditions do not automatically grant approval. The partner's clean run supports reproducibility but does not resolve investment-policy or robustness failures.
 
 ## Reflect and checkout
-The partner discussion of what the cold run revealed and what Linda will not touch before the deadline remains unreported. Partner elapsed time remains missing from the required cold-run note. This record does not assert full Lab 20 completion.
+The partner discussion of what the cold run revealed and what Linda will not touch before the deadline remains unreported. This record does not assert full Lab 20 completion.
 
 Submit the [Lab 20 record](https://github.com/llindali/lab20/blob/main/lab20.md) and relevant Project 2 evidence links through Brightspace → Quizzes → Lab 20. Brightspace submission and due-date confirmation are not claimed here.
 
