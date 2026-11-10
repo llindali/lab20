@@ -9,4 +9,4 @@ ChatGPT assisted with evidence review and documentation. Partner reports and stu
 
 The record now includes Linda's supplied partner confirmation of a clean run (no fix needed) and links to the existing committed AI-off prediction and before/after result. This supersedes the earlier Lab 15-only preparation audit.
 
-Partner elapsed time (6 minutes 15 seconds), auditor label and control observations are now recorded. Still unreported: no-AI code discussion and reflection. No full Lab 20 completion or Brightspace submission is claimed. Videos and transcripts remain separate Project 2 submission work.
+Partner elapsed time (6 minutes 15 seconds), auditor label, control observations, and Linda's confirmation of the completed code discussion and reflection are recorded. The Lab 20 repository record is complete based on the supplied confirmations. Submit the GitHub links through Brightspace; submission has not been performed here. Videos and transcripts remain separate Project 2 submission work.
