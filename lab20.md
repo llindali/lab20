@@ -32,6 +32,7 @@ Actual Project 2: [llindali/project2](https://github.com/llindali/project2). Thi
 - Outcome: dependencies installed without version conflicts, engine completed, app opened at localhost:8501, and unit tests passed.
 - First failure: none reported.
 - Result: root `visible_output.json`, terminal summary, and Streamlit app with mandate verdicts, controls, stress information and download.
+
 ### Partner-reported control checks — November 10, 2026
 - **Auditor label supplied:** Peer Auditor (Lab 20 Cold-Check Session); personal name not supplied.
 - **Total elapsed time:** 6 minutes 15 seconds, from clone through installation, engine run and interactive UI check.
@@ -79,7 +80,13 @@ The actual Project 2 validation file now contains the student-attested AI-off pr
 The committed prediction expected unchanged weights and volatility and a 0.675-point return increase. Actual reoptimization reduced equity by five points, raised estimated return by about 0.191 points and reduced volatility by about 0.739 points. The original prediction mistook output weights for constraints: reserve floor is 3%, equity cap 70%. Higher estimated equity return lets the minimum-volatility model clear the unchanged 7% hurdle with less equity. Rejection of live adoption remains unchanged. The full prediction, diagnosis and student attestation remain in Project 2; no prediction has been rewritten after observing results.
 
 ## Explain the code
-No-AI partner explanation and partner question/answer have not been reported. No completion is claimed.
+**Student-confirmed completed:** Linda confirms that the code explanation and partner Q&A were completed. Her supplied walkthrough covered monthly return estimation, annualized covariance, the five-point grid search, mandate checks, and why a higher VT return estimate permits less equity at the same hurdle. This completion is student-reported, not witnessed by the AI assistant. The supplied cheat sheet is preparation material, not proof of the conditions during the spoken activity.
+
+**Question supplied in the report:** “Where in the code does the app enforce the 3% minimum reserve rule versus the 55% base weight?”
+
+**Answer, with code terminology checked:** In `run(..., reserve=.03, ...)`, the grid search skips a candidate when `w[0] < reserve-1e-9`. The `measure()` function separately reports the buffer check with `w[0] + 1e-9 >= reserve`. The 55% SGOV weight is an optimized baseline output, not a constraint. The 3% floor effectively requires at least 5% on the five-point grid. This is an explicit candidate filter, not an external optimizer's bounds object.
+
+The engine minimizes annualized volatility; minimizing its square, variance, would give the same ranking. The default 70% VT cap applies under the positive-momentum signal branch; the other branch uses 30%. The input series are adjusted-price total-return proxies, not independently authenticated total-return histories.
 
 ## E — Fix one thing
 Partner reports no first failure and a clean first pass; **no fix was needed**. No fabricated fix or rerun is recorded.
@@ -88,7 +95,12 @@ Partner reports no first failure and a clean first pass; **no fix was needed**. 
 **Reject live adoption (0–0% live allocation); reconsider only after approved issuer treatment and risk policy, authenticated fresh data, justified estimates, benchmark evidence and robust feasible stress results with no weight shift over 10 points.** Necessary conditions do not automatically grant approval. The partner's clean run supports reproducibility but does not resolve investment-policy or robustness failures.
 
 ## Reflect and checkout
-The partner discussion of what the cold run revealed and what Linda will not touch before the deadline remains unreported. This record does not assert full Lab 20 completion.
+**Student-confirmed completed:** Linda confirms the joint reflection was completed and supplied the following substance.
+
+- **What the cold run revealed:** The live control response made the return-hurdle mechanism clear: adding 1.5 percentage points to VT's return estimate permitted 60% SGOV / 40% VT instead of 55% SGOV / 45% VT, while keeping the estimated-return hurdle satisfied. The reported clean run also supported README reproducibility without runtime API keys or hidden data requests. This was sensitivity to the return estimate at a fixed hurdle, not a test changing the hurdle itself.
+- **What will remain unchanged before the deadline:** Preserve the saved baseline result (55% SGOV / 0% BND / 45% VT), constraint settings, and rejection of live adoption. Do not relax the reserve rule or tune estimates to force approval. Policy, ten-year evidence and issuer-treatment gaps remain disclosed. The baseline allocation is an output of frozen baseline inputs, not a hard-coded weight constraint.
+
+The repository now contains the reported cold run, elapsed time, no-fix outcome, locked prediction/result links, decision line, and student confirmation of code explanation and reflection. The Lab 20 repository record is complete on the supplied confirmations; Project 2's outstanding submission items remain separately documented.
 
 Submit the [Lab 20 record](https://github.com/llindali/lab20/blob/main/lab20.md) and relevant Project 2 evidence links through Brightspace → Quizzes → Lab 20. Brightspace submission and due-date confirmation are not claimed here.
 
